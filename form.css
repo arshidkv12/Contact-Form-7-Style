@@ -1,0 +1,916 @@
+/*!
+ * Form Framework v1.0.0 (https://form.js.org)
+ * Author: Abdall Arbab.
+ * Copyright 2019 Codolog.
+ * Licensed under MIT (https://github.com/the94air/form/blob/master/LICENSE)
+ */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ .wpcf7 {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+   .wpcf7 h1 {
+    font-size: 2em;
+    margin: .67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  .wpcf7 hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+   .wpcf7 pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+   .wpcf7 a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+   .wpcf7 abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+   .wpcf7 b,
+   .wpcf7 strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+   .wpcf7 code,
+   .wpcf7 kbd,
+   .wpcf7 samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+   .wpcf7 small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+   .wpcf7 sub,
+   .wpcf7 sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  .wpcf7 sub {
+    bottom: -0.25em;
+  }
+  
+  .wpcf7 sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+   .wpcf7 img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+   .wpcf7 button,
+   .wpcf7 input,
+   .wpcf7 optgroup,
+   .wpcf7 select,
+   .wpcf7 textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+   .wpcf7 button,
+   .wpcf7 input {
+    /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+   .wpcf7 button,
+   .wpcf7 select {
+    /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+   .wpcf7 button,
+   .wpcf7 [type="button"],
+   .wpcf7 [type="reset"],
+   .wpcf7 [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+   .wpcf7 button::-moz-focus-inner,
+   .wpcf7 [type="button"]::-moz-focus-inner,
+   .wpcf7 [type="reset"]::-moz-focus-inner,
+   .wpcf7 [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+   .wpcf7 button:-moz-focusring,
+   .wpcf7 [type="button"]:-moz-focusring,
+   .wpcf7 [type="reset"]:-moz-focusring,
+   .wpcf7 [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+   .wpcf7 fieldset {
+    padding: .35em .75em .625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+   .wpcf7 legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+   .wpcf7 progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+   .wpcf7 textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+   .wpcf7 [type="checkbox"],
+   .wpcf7 [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+   .wpcf7 [type="number"]::-webkit-inner-spin-button,
+   .wpcf7 [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+   .wpcf7 [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+   .wpcf7 [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+   .wpcf7 ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+   .wpcf7 details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+   .wpcf7 summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+   .wpcf7 template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+   .wpcf7 [hidden] {
+    display: none;
+  }
+  
+  /**
+   * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+   * A thin layer on top of normalize.css that provides a starting point more
+   * suitable for web applications.
+   */
+  
+  /**
+   * 1. Prevent padding and border from affecting element width
+   * https://goo.gl/pYtbK7
+   * 2. Change the default font family in all browsers (opinionated)
+   */
+  
+   .wpcf7  {
+    box-sizing: border-box; /* 1 */
+    font-family: sans-serif; /* 2 */
+  }
+  
+  .wpcf7 *,
+  .wpcf7 *::before,
+  .wpcf7 *::after {
+    box-sizing: inherit;
+  }
+  
+  /**
+   * Removes the default spacing and border for appropriate elements.
+   */
+  
+   .wpcf7 blockquote,
+   .wpcf7 dl,
+   .wpcf7 dd,
+   .wpcf7 h1,
+   .wpcf7 h2,
+   .wpcf7 h3,
+   .wpcf7 h4,
+   .wpcf7 h5,
+   .wpcf7 h6,
+   .wpcf7 figure,
+   .wpcf7 p,
+   .wpcf7 pre {
+    margin: 0;
+  }
+  
+  .wpcf7 button {
+    background: transparent;
+    padding: 0;
+  }
+  
+  /**
+   * Work around a Firefox/IE bug where the transparent `button` background
+   * results in a loss of the default `button` focus styles.
+   */
+  
+   .wpcf7 button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  
+  .wpcf7 fieldset {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wpcf7 ol,
+  .wpcf7 ul {
+    margin: 0;
+  }
+  
+  /**
+   * Tailwind custom reset styles
+   */
+  
+  /**
+   * Allow adding a border to an element by just adding a border-width.
+   *
+   * By default, the way the browser specifies that an element should have no
+   * border is by setting it's border-style to `none` in the user-agent
+   * stylesheet.
+   *
+   * In order to easily add borders to elements by just setting the `border-width`
+   * property, we change the default border-style for all elements to `solid`, and
+   * use border-width to hide them instead. This way our `border` utilities only
+   * need to set the `border-width` property instead of the entire `border`
+   * shorthand, making our border utilities much more straightforward to compose.
+   *
+   * https://github.com/tailwindcss/tailwindcss/pull/116
+   */
+  
+   .wpcf7 *,
+   .wpcf7 *::before,
+   .wpcf7 *::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: #dae1e7;
+  }
+  
+  /**
+   * Undo the `border-style: none` reset that Normalize applies to images so that
+   * our `border-{width}` utilities have the expected effect.
+   *
+   * The Normalize reset is unnecessary for us since we default the border-width
+   * to 0 on all elements.
+   *
+   * https://github.com/tailwindcss/tailwindcss/issues/362
+   */
+  
+   .wpcf7 img {
+    border-style: solid;
+  }
+  
+  .wpcf7 textarea {
+    resize: vertical;
+  }
+  
+  .wpcf7 img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .wpcf7 input::-webkit-input-placeholder,
+  .wpcf7 textarea::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+  
+  .wpcf7 input:-ms-input-placeholder,
+  .wpcf7 textarea:-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+  
+  .wpcf7 input::-ms-input-placeholder,
+  .wpcf7 textarea::-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+  
+  .wpcf7 input::placeholder,
+  .wpcf7 textarea::placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+  
+  .wpcf7 button,
+  .wpcf7 [role="button"] {
+    cursor: pointer;
+  }
+  
+  .wpcf7 table {
+    border-collapse: collapse;
+  }
+  
+  .wpcf7 {
+    line-height: 1.25;
+    background-color: #fff;
+    color: #22292f;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wpcf7 h1,
+  .wpcf7 h2,
+  .wpcf7 h3,
+  .wpcf7 h4,
+  .wpcf7 h5,
+  .wpcf7 h6 {
+    font-weight: 600;
+  }
+  
+  .wpcf7 p {
+    margin-bottom: .5rem;
+  }
+  
+  .wpcf7 hr {
+    height: 1px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    background-color: #dae1e7;
+  }
+  
+  .wpcf7 a {
+    color: #3490dc;
+    transition: color 100ms ease;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+  }
+  
+  .wpcf7 a:hover,
+  .wpcf7 a:focus {
+    color: #1c3d5a;
+    text-decoration: underline;
+  }
+  
+  .wpcf7  a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .wpcf7 a:not([href]):not([tabindex]):hover,
+  .wpcf7 a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .wpcf7 a:not([href]):not([tabindex]):focus {
+    outline: 0;
+  }
+  
+  .wpcf7 label.wpcf7-form-control {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+  }
+  
+  .wpcf7 input.wpcf7-form-control:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]) {
+    display: block;
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    border-radius: .125rem;
+    background-color: #fff;
+    color: inherit;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border: 1px solid #b8c2cc;
+    -webkit-appearance: none;
+    transition: all 200ms ease;
+  }
+  
+  .wpcf7 input.wpcf7-form-control:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]):focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, .5);
+    border-color: #3490dc;
+  }
+  
+  .wpcf7 input.wpcf7-form-control:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]):disabled {
+    pointer-events: none;
+    opacity: .5;
+    background-color: #f1f5f8;
+  }
+  
+  .wpcf7 input.wpcf7-form-control:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]).wpcf7-not-valid {
+    border-color: #e3342f;
+  }
+  
+  .wpcf7 input.wpcf7-form-control:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]).wpcf7-not-valid:focus {
+    box-shadow: 0 0 0 3px rgba(227, 52, 47, .5);
+  }
+  
+  .wpcf7 textarea.wpcf7-form-control {
+    display: block;
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    border-radius: .125rem;
+    background-color: #fff;
+    color: inherit;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border: 1px solid #b8c2cc;
+    -webkit-appearance: none;
+    min-height: 100px;
+    transition: box-shadow 200ms ease, border 200ms ease;
+  }
+  
+  .wpcf7 textarea.wpcf7-form-control:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, .5);
+    border-color: #3490dc;
+  }
+  
+  .wpcf7 textarea.wpcf7-form-control:disabled {
+    pointer-events: none;
+    opacity: .5;
+    background-color: #f1f5f8;
+  }
+  
+  .wpcf7 textarea.wpcf7-form-control.wpcf7-not-valid {
+    border-color: #e3342f;
+  }
+  
+  .wpcf7 textarea.wpcf7-form-control.wpcf7-not-valid:focus {
+    box-shadow: 0 0 0 3px rgba(227, 52, 47, .5);
+  }
+  
+  .wpcf7 input[type=checkbox].wpcf7-form-control {
+    margin-right: .25rem;
+    line-height: 1.25;
+  }
+  
+  .wpcf7 input[type=checkbox].wpcf7-form-control:disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+  
+  .wpcf7 input[type=checkbox].wpcf7-form-control + label.wpcf7-form-control {
+    font-weight: 400;
+  }
+  
+  .wpcf7 input[type=radio].wpcf7-form-control {
+    margin-right: .25rem;
+    line-height: 1.25;
+  }
+  
+  .wpcf7 input[type=radio].wpcf7-form-control:disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+  
+  .wpcf7 input[type=radio].wpcf7-form-control + label.wpcf7-form-control {
+    font-weight: 400;
+  }
+  
+  .wpcf7 select.wpcf7-form-control:not([multiple]) {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-right: 1.25rem;
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    border-radius: .125rem;
+    background-color: #fff;
+    color: inherit;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border: 1px solid #b8c2cc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='26' viewBox='0 0 41 26'%3E%3Cpath fill='%23606060' d='M0 5.382l19.983 19.983L40.14 5.208 34.932 0 19.869 15.062 4.84.032z' fill-rule='evenodd' style='&%2310; fill: %23b8c2cc;&%2310;'/%3E%3C/svg%3E");
+    background-position: right .4rem center;
+    background-repeat: no-repeat;
+    background-size: .75rem;
+    -webkit-appearance: none;
+    transition: all 200ms ease;
+  }
+  
+  .wpcf7 select.wpcf7-form-control:not([multiple]):focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, .5);
+    border-color: #3490dc;
+  }
+  
+  .wpcf7 select.wpcf7-form-control:not([multiple]):disabled {
+    pointer-events: none;
+    opacity: .5;
+    background-color: #f1f5f8;
+  }
+  
+  .wpcf7 select.wpcf7-form-control:not([multiple]).wpcf7-not-valid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='26' viewBox='0 0 41 26'%3E%3Cpath fill='%23606060' d='M0 5.382l19.983 19.983L40.14 5.208 34.932 0 19.869 15.062 4.84.032z' fill-rule='evenodd' style='&%2310; fill: %23e3342f;&%2310;'/%3E%3C/svg%3E");
+    background-position: right .4rem center;
+    background-repeat: no-repeat;
+    background-size: .75rem;
+    border-color: #e3342f;
+  }
+  
+  .wpcf7 select.wpcf7-form-control:not([multiple]).wpcf7-not-valid:focus {
+    box-shadow: 0 0 0 3px rgba(227, 52, 47, .5);
+  }
+  
+  .wpcf7 input[type=file].wpcf7-form-control {
+    display: block;
+    border-radius: .125rem;
+    margin-bottom: .5rem;
+    border: 1px solid transparent;
+  }
+  
+  .wpcf7 input[type=file].wpcf7-form-control:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, .5);
+    border-color: #3490dc;
+  }
+  
+  .wpcf7 input[type=file].wpcf7-form-control:disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+  
+  .wpcf7 span.wpcf7-form-control {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    color: #cc1f1a;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control,
+  .wpcf7 input[type=button].wpcf7-form-control,
+  .wpcf7 button.wpcf7-form-control,
+  .wpcf7 a.wpcf7-form-control {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .125rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3490dc;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    transition: all 200ms ease;
+    font-weight: 600;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control:hover,
+  .wpcf7 input[type=submit].wpcf7-form-control:focus,
+  .wpcf7 input[type=button].wpcf7-form-control:hover,
+  .wpcf7 input[type=button].wpcf7-form-control:focus,
+  .wpcf7 button.wpcf7-form-control:hover,
+  .wpcf7 button.wpcf7-form-control:focus,
+  .wpcf7 a.wpcf7-form-control:hover,
+  .wpcf7 a.wpcf7-form-control:focus {
+    background-color: #2779bd;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control:focus,
+  .wpcf7 input[type=button].wpcf7-form-control:focus,
+  .wpcf7  button.wpcf7-form-control:focus,
+  .wpcf7 a.wpcf7-form-control:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, .5);
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control:disabled,
+  .wpcf7 input[type=button].wpcf7-form-control:disabled,
+  .wpcf7 button.wpcf7-form-control:disabled,
+  a.wpcf7-form-control:disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.success,
+  .wpcf7 input[type=button].wpcf7-form-control.success,
+  .wpcf7 button.wpcf7-form-control.success,
+  .wpcf7 a.wpcf7-form-control.success {
+    background-color: #38c172;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.success:hover,
+  .wpcf7 input[type=submit].wpcf7-form-control.success:focus,
+  .wpcf7 input[type=button].wpcf7-form-control.success:hover,
+  .wpcf7 input[type=button].wpcf7-form-control.success:focus,
+  .wpcf7 button.wpcf7-form-control.success:hover,
+  .wpcf7 button.wpcf7-form-control.success:focus,
+  .wpcf7 a.wpcf7-form-control.success:hover,
+  .wpcf7 a.wpcf7-form-control.success:focus {
+    background-color: #1f9d55;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.info,
+  .wpcf7 input[type=button].wpcf7-form-control.info,
+  .wpcf7 button.wpcf7-form-control.info,
+  .wpcf7 a.wpcf7-form-control.info {
+    background-color: #4dc0b5;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.info:hover,
+  .wpcf7 input[type=submit].wpcf7-form-control.info:focus,
+  .wpcf7 input[type=button].wpcf7-form-control.info:hover,
+  .wpcf7 input[type=button].wpcf7-form-control.info:focus,
+  .wpcf7 button.wpcf7-form-control.info:hover,
+  .wpcf7 button.wpcf7-form-control.info:focus,
+  .wpcf7 a.wpcf7-form-control.info:hover,
+  .wpcf7 a.wpcf7-form-control.info:focus {
+    background-color: #38a89d;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.warning,
+  .wpcf7 input[type=button].wpcf7-form-control.warning,
+  .wpcf7 button.wpcf7-form-control.warning,
+  .wpcf7 a.wpcf7-form-control.warning {
+    background-color: #f6993f;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.warning:hover,
+  .wpcf7 input[type=submit].wpcf7-form-control.warning:focus,
+  .wpcf7 input[type=button].wpcf7-form-control.warning:hover,
+  .wpcf7 input[type=button].wpcf7-form-control.warning:focus,
+  .wpcf7 button.wpcf7-form-control.warning:hover,
+  .wpcf7 button.wpcf7-form-control.warning:focus,
+  .wpcf7 a.wpcf7-form-control.warning:hover,
+  .wpcf7 a.wpcf7-form-control.warning:focus {
+    background-color: #de751f;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.danger,
+  .wpcf7 input[type=button].wpcf7-form-control.danger,
+  .wpcf7 button.wpcf7-form-control.danger,
+  .wpcf7 a.wpcf7-form-control.danger {
+    background-color: #e3342f;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.danger:hover,
+  .wpcf7 input[type=submit].wpcf7-form-control.danger:focus,
+  .wpcf7 input[type=button].wpcf7-form-control.danger:hover,
+  .wpcf7 input[type=button].wpcf7-form-control.danger:focus,
+  .wpcf7 button.wpcf7-form-control.danger:hover,
+  .wpcf7 button.wpcf7-form-control.danger:focus,
+  .wpcf7 a.wpcf7-form-control.danger:hover,
+  .wpcf7 a.wpcf7-form-control.danger:focus {
+    background-color: #cc1f1a;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control.full,
+  .wpcf7 input[type=button].wpcf7-form-control.full,
+  .wpcf7 button.wpcf7-form-control.full,
+  .wpcf7 a.wpcf7-form-control.full {
+    width: 100%;
+  }
+  
+  .wpcf7 input[type=submit].wpcf7-form-control + .wpcf7 input[type=submit].wpcf7-form-control,
+  .wpcf7 input[type=submit].wpcf7-form-control + .wpcf7 input[type=button].wpcf7-form-control,
+  .wpcf7 input[type=submit].wpcf7-form-control + .wpcf7 button.wpcf7-form-control,
+  .wpcf7 input[type=submit].wpcf7-form-control + .wpcf7 a.wpcf7-form-control,
+  .wpcf7 input[type=button].wpcf7-form-control + .wpcf7 input[type=submit].wpcf7-form-control,
+  .wpcf7 input[type=button].wpcf7-form-control + .wpcf7 input[type=button].wpcf7-form-control,
+  .wpcf7 input[type=button].wpcf7-form-control + .wpcf7 button.wpcf7-form-control,
+  .wpcf7 input[type=button].wpcf7-form-control + .wpcf7 a.wpcf7-form-control,
+  .wpcf7 button.wpcf7-form-control + .wpcf7 input[type=submit].wpcf7-form-control,
+  .wpcf7 button.wpcf7-form-control + .wpcf7 input[type=button].wpcf7-form-control,
+  .wpcf7 button.wpcf7-form-control + .wpcf7 button.wpcf7-form-control,
+  .wpcf7 button.wpcf7-form-control + .wpcf7 a.wpcf7-form-control,
+  .wpcf7 a.wpcf7-form-control + .wpcf7 input[type=submit].wpcf7-form-control,
+  .wpcf7 a.wpcf7-form-control + .wpcf7 input[type=button].wpcf7-form-control,
+  .wpcf7 a.wpcf7-form-control + .wpcf7 button.wpcf7-form-control,
+  .wpcf7 a.wpcf7-form-control + .wpcf7 a.wpcf7-form-control {
+    margin-left: .5rem;
+  }
+  .wpcf7 form{font-family: Source Sans Pro,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}
+  .wpcf7 .wpcf7-not-valid-tip{font-size: .9em;}
+  .wpcf7 p{margin: 0;} form span.wpcf7-form-control-wrap{margin-bottom:1rem;} 
+  .wpcf7 textarea.wpcf7-form-control.wpcf7-textarea{ margin-bottom: 1rem; min-height: 223px;}
+  .wpcf7 br{display: none;}span.wpcf7-list-item.first{margin: 0;}span.wpcf7-list-item{color: #000;font-size: 1.4rem;}
+  .wpcf7 form input[type=checkbox]{
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  .wpcf7 form input[type=checkbox]:focus,
+  .wpcf7 form input[type=checkbox]:active{
+      outline: none;
+  }
+  .wpcf7 form input[type=checkbox]:checked::before {
+	content: "✓";
+    font-size: 1.3rem;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background: #3490dc;
+    vertical-align: middle;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+  }

@@ -5,7 +5,7 @@
  * Description: CF7 css style
  * Author: Arshid
  * Author URI: https://servmask.com/
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 /**
