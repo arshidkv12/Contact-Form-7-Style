@@ -6,6 +6,7 @@ First, download the CF7 style plugin and upload it to your WordPress.
 
 ## Tutorials 
 1) How to add contact form 7 submit button CSS?
+
 2)Contact form 7 custom checkbox (acceptance) style 
 
 https://wpdebuglog.com/forums/topic/contact-form-7-style/
